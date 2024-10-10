@@ -19,7 +19,7 @@ public class EtudiantService implements IEtudiant {
 
     @Override
     public Etudiant findById(Long id) {
-        return etudiantRepository.findById(id).orElse(null);
+        return (Etudiant) etudiantRepository.findById(id).orElse(null);
     }
 
     @Override

@@ -21,7 +21,7 @@ public class PresenceService implements IPresence {
 
     @Override
     public Presence findById(Long id) {
-        return presenceRepository.findById(id).orElse(null);
+        return (Presence) presenceRepository.findById(id).orElse(null);
     }
 
     @Override

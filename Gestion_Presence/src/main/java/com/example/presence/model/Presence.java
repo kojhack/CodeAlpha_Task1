@@ -1,9 +1,14 @@
 package com.example.presence.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "presence")
 public class Presence {
 
@@ -72,5 +77,13 @@ public class Presence {
             ", datePresence=" + datePresence +
             ", statut='" + statut + '\'' +
             '}';
+  }
+
+  public void setEtudiantId(long etudiantId) {
+    this.etudiantId = etudiantId;
+  }
+
+  public long getEtudiantId() {
+    return etudiantId;
   }
 }

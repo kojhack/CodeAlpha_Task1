@@ -3,6 +3,7 @@ package com.example.presence.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Set;
 
@@ -27,7 +28,7 @@ public class Etudiant {
     @Column(name = "departement", unique = true)
     private String departement;
     @Column(name = "date_inscription", unique = true)
-    private Date date_inscription;
+    private LocalDate date_inscription;
 
     @OneToMany(mappedBy = "etudiant", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Presence> presences;
